@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Bittly</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__body">
+        <div class="header__body-inner container">
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item hidden-mobile">
+                  <a
+                    href="/"
+                    class="header__logo logo"
+                    title="Home"
+                    aria-label="Home"
+                  >
+                    <img
+                      src="./images/logo-header.svg"
+                      alt=""
+                      class="header__logo-image"
+                      width="100"
+                      height="41"
+                    />
+                  </a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link is-active">Обмен</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Партнерам</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">AML</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <a
+            href="/"
+            class="header__logo logo visible-mobile"
+            title="Home"
+            aria-label="Home"
+          >
+            <img
+              src="./images/logo-header.svg"
+              alt=""
+              class="logo__image"
+              width="100"
+              height="41"
+            />
+          </a>
+
+          <button
+            class="header__burger-button burger-button visible-mobile"
+            type="button"
+            aria-label="Open menu"
+            title="Open menu"
+            data-js-header-burger-button
+          >
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container" aria-labelledby="hero-title">
+        <ul class="hero__list">
+          <li class="hero__item hidden-laptop-show-mobile">
+            <h2 class="hero__title" id="hero-title">
+              <span class="hero__title hero__title--red">Bittly</span>
+              — криптообмен <br />
+              без лишних слов. Только суть.
+            </h2>
+          </li>
+
+          <li class="hero__item hidden-laptop-show-mobile">
+            <div class="hero__card card card--small">
+              <h3 class="card__title">Курс</h3>
+              <p class="card__course">78.52312 RUB = 1 USDTERC20</p>
+              <a href="#" class="card__link"> % Комиссии и скидки </a>
+            </div>
+          </li>
+
+          <li class="hero__item hero__item--alt visually-hidden">
+            <h2 class="hero__title" id="hero-title">
+              <span class="hero__title hero__title--red">Bittly</span>
+              — криптообмен <br />
+              без лишних слов. Только суть.
+            </h2>
+            <div class="hero__card card card--small">
+              <h3 class="card__title">Курс</h3>
+              <p class="card__course">78.52312 RUB = 1 USDTERC20</p>
+              <a href="#" class="card__link"> % Комиссии и скидки </a>
+            </div>
+          </li>
+
+          <li class="hero__item">
+            <div class="hero__card card">
+              <h3 class="card__title">Отдаете</h3>
+              <form class="card__form form">
+                <label for="hero-value" class="form__label visually-hidden"
+                  >Введите сумму</label
+                >
+                <div class="form__input-wrapper">
+                  <img
+                    class="form__icon"
+                    src="./images/hero/currency-icon-1.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+
+                  <input
+                    type="number"
+                    min="0"
+                    max="1000000"
+                    id="hero-value"
+                    class="form__input"
+                    placeholder="350000"
+                  />
+                  <span class="form__currency">RUB</span>
+                </div>
+                <p class="form__description">Минимум: 350000</p>
+              </form>
+              <div class="card__values">
+                <div class="card__value is-active">
+                  <img
+                    class="card__value-image"
+                    src="./images/hero/currency-icon-1.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+                  <p class="card__value-text">Cash RUB</p>
+                </div>
+                <div class="card__value">
+                  <img
+                    class="card__value-image"
+                    src="./images/hero/currency-icon-2.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+                  <p class="card__value-text">Cash USD</p>
+                </div>
+                <div class="card__value">
+                  <img
+                    class="card__value-image"
+                    src="./images/hero/currency-icon-3.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+                  <p class="card__value-text">ERC20 USDTERC20</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="hero__item">
+            <div class="hero__card card">
+              <h3 class="card__title">Получаете</h3>
+              <form class="card__form form">
+                <label for="hero-value" class="form__label visually-hidden"
+                  >Введите сумму</label
+                >
+                <div class="form__input-wrapper">
+                  <img
+                    class="form__icon"
+                    src="./images/hero/currency-icon-3.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+
+                  <input
+                    type="number"
+                    min="0"
+                    max="1000000"
+                    id="hero-value"
+                    class="form__input"
+                    placeholder="350000"
+                  />
+                  <span class="form__currency">USDTERC20</span>
+                </div>
+                <p class="form__description">Резерв: 901248.57</p>
+              </form>
+              <div class="card__values">
+                <div class="card__value is-active">
+                  <img
+                    class="card__value-image"
+                    src="./images/hero/currency-icon-3.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+                  <p class="card__value-text">ERC20 usdterc20</p>
+                </div>
+                <div class="card__value">
+                  <img
+                    class="card__value-image"
+                    src="./images/hero/currency-icon-4.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+                  <p class="card__value-text">USDC ERC20 USDCERC20</p>
+                </div>
+                <div class="card__value">
+                  <img
+                    class="card__value-image"
+                    src="./images/hero/currency-icon-5.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+                  <p class="card__value-text">TRC20 USDTTRC20</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="hero__item">
+            <div class="hero__card card">
+              <h3 class="card__title">Заявка</h3>
+              <form class="card__form form">
+                <label for="hero-value" class="form__label"
+                  ><span class="form__label-star">*</span> E-mail</label
+                >
+                <div class="form__input-wrapper">
+                  <img
+                    class="form__icon"
+                    src="./images/hero/mail-icon.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+
+                  <input
+                    type="email"
+                    id="hero-value"
+                    class="form__input form__input--mod"
+                    placeholder="Введите E-mail"
+                    required
+                  />
+                </div>
+                <label for="hero-value" class="form__label"
+                  ><span class="form__label-star">*</span> Счёт (адрес)</label
+                >
+                <div class="form__input-wrapper">
+                  <img
+                    class="form__icon"
+                    src="./images/hero/currency-icon-3.png"
+                    alt=""
+                    width="30"
+                    height="30"
+                    loading="lazy"
+                  />
+
+                  <input
+                    type="text"
+                    id="hero-value"
+                    class="form__input form__input--mod"
+                    placeholder="Введите счёт"
+                    required
+                  />
+                </div>
+              </form>
+              <button type="button" class="form__button button">
+                Обменять
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info__bg" aria-labelledby="info-title">
+        <div class="info container">
+          <div class="info__inner">
+            <div class="info__main">
+              <h2 id="info-title" class="info__title">
+                <span class="info__title hero__title hero__title--red"
+                  >Bittly</span
+                >
+                — обмен, <br />
+                в котором можно быть уверенным
+              </h2>
+              <div class="info__advantages">
+                <p class="info__advantage button">Быстро и безопасно</p>
+                <p class="info__advantage button">Выгодный курс</p>
+              </div>
+              <button class="info__button button">Совершить обмен</button>
+            </div>
+            <div class="info__extra">
+              <img
+                src="./images/info/info-bg-2.png"
+                class="info__image hidden-mobile"
+                alt=""
+                width="538"
+                height="650"
+                loading="lazy"
+              />
+
+              <img
+                src="./images/info/bg-image-mobile.png"
+                class="info__image-mobile visible-mobile"
+                alt=""
+                width="140"
+                height="193"
+                loading="lazy"
+              />
+
+              <div class="info__soc1als">
+                <img
+                  class="info__soc1als-icon"
+                  src="./images/info/support.png"
+                  alt="Тех поддержка"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <img
+                  class="info__soc1als-icon"
+                  src="./images/info/tg.png"
+                  alt="Телеграм"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
