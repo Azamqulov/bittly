@@ -631,7 +631,7 @@ body {
 }
 
 .info__bg {
-    background: url('images/info-bg.jpg') center/cover no-repeat;
+    background: url('../../images/info/info-bg.jpg') center/cover no-repeat;
     min-height: 900px;
     display: flex;
     align-items: center;
@@ -810,6 +810,12 @@ body {
         max-width: 50%;
         object-fit: cover;
     }
+}
+
+.info__image-mobile {
+    position: relative;
+    top: -264px;
+    right: 0;
 }
 
 .info__socials {
